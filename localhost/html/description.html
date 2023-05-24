@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+<!--Меню -->
+<div class="todoApi">
+
+
+
+<script>
+let API = document.querySelector('.todoApi'); 
+
+fetch('../recipes.json')  
+.then(response => response.json()) 
+.then(api => {
+
+for (let i = 0; i < 9; i++) {
+let item = document.createElement('span'); 
+item.innerHTML +=  api[i].description;
+
+API.appendChild(item) }});
+</script>
+</div>
+    </body>
+</html>>
